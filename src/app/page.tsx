@@ -296,51 +296,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='bg-white dark:bg-slate-950 py-24'>
-        <div className='container'>
-          <div className='max-w-4xl mx-auto'>
-            <div className='text-center mb-16'>
-              <h2 className='text-3xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-6'>
-                Frequently Asked
-                <span className='text-blue-600'> Questions</span>
-              </h2>
-              <p className='text-xl text-slate-600 dark:text-slate-400'>
-                Everything you need to know about CalcVerse and our financial tools.
-              </p>
-            </div>
-            <div className='space-y-6'>
-              {[
-                {
-                  q: 'Are these calculators really free?',
-                  a: 'Yes, all CalcVerse calculators are 100% free to use. We believe in providing accessible financial tools to help everyone make better money decisions.'
-                },
-                {
-                  q: 'How accurate are the results?',
-                  a: 'Our calculators use industry-standard mathematical formulas for financial calculations. While highly accurate for planning, they should be used as estimates. Always consult with a certified financial advisor for major life decisions.'
-                },
-                {
-                  q: 'Is my financial data stored?',
-                  a: 'No. Privacy is a core value at CalcVerse. All calculations happen locally in your browser. We do not store or see any of the numbers you enter into our tools.'
-                },
-                {
-                  q: 'Can I use CalcVerse on my phone?',
-                  a: 'Absolutely! CalcVerse is designed with a mobile-first approach. It works seamlessly on all smartphones, tablets, and desktop computers.'
-                }
-              ].map((faq, i) => (
-                <div key={i} className='p-8 bg-slate-50 dark:bg-slate-900/50 rounded-3xl border border-slate-100 dark:border-slate-800 hover:border-blue-500/20 transition-colors'>
-                  <h3 className='text-xl font-bold text-slate-900 dark:text-white mb-4'>
-                    {faq.q}
-                  </h3>
-                  <p className='text-lg text-slate-600 dark:text-slate-400 leading-relaxed'>
-                    {faq.a}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
+      
       <section className='bg-white dark:bg-slate-950 py-24'>
         <div className='container'>
           <div className='max-w-4xl mx-auto'>
@@ -383,7 +339,7 @@ export default function Home() {
               ))}
             </div>
             <div className='text-center mt-12'>
-              <a href='/contact' className='inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium'>
+              <a href='/contact' className='inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium'>
                 Still have questions?
                 <svg className='w-4 h-4 ml-2' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                   <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
