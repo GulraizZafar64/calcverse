@@ -40,9 +40,5 @@ const TermsOfServicePage = () => {
     </main>
   )
 }
-      </section>
-    </main>
-  )
-}
 
 export default TermsOfServicePage

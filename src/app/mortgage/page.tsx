@@ -1,102 +1,19 @@
-'use client'
-
-import { useState } from 'react'
 import CalculatorLayout from '@/app/components/CalculatorLayout'
-import CalculatorForm from '@/app/components/CalculatorForm'
-import ResultCard from '@/app/components/ResultCard'
-import { calculateMortgage, formatMoney, parseNumberInput } from '@/app/lib/calculators'
-import type { CalculatorField, ResultItem } from '@/app/types/calculator'
+import MortgageClient from './MortgageClient'
 
 export const metadata = {
   title: 'Mortgage Calculator | Financial Tools',
   description: 'Calculate monthly mortgage payments, total interest, and final payment for home financing.',
 }
 
-const initialFields: CalculatorField[] = [
-  {
-    name: 'homePrice',
-    label: 'Home price',
-    placeholder: 'Enter property price',
-    value: '',
-  },
-  {
-    name: 'downPayment',
-    label: 'Down payment',
-    placeholder: 'Enter upfront down payment',
-    value: '',
-  },
-  {
-    name: 'interestRate',
-    label: 'Interest rate (%)',
-    placeholder: 'Annual mortgage rate',
-    value: '',
-  },
-  {
-    name: 'termYears',
-    label: 'Loan term (years)',
-    placeholder: 'Mortgage length in years',
-    value: '',
-  },
-]
-
 const MortgagePage = () => {
-  const [fields, setFields] = useState<CalculatorField[]>(initialFields)
-  const [results, setResults] = useState<ResultItem[]>([
-    { label: 'Monthly mortgage payment', value: '$0.00' },
-    { label: 'Total payment', value: '$0.00' },
-    { label: 'Total interest', value: '$0.00' },
-  ])
-  const [formError, setFormError] = useState('')
-
-  const handleChange = (name: string, value: string) => {
-    setFields((current) =>
-      current.map((field) =>
-        field.name === name ? { ...field, value } : field
-      )
-    )
-    setFormError('')
-  }
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    const homePrice = parseNumberInput(fields.find((field) => field.name === 'homePrice')?.value || '')
-    const downPayment = parseNumberInput(fields.find((field) => field.name === 'downPayment')?.value || '')
-    const interestRate = parseNumberInput(fields.find((field) => field.name === 'interestRate')?.value || '')
-    const years = parseNumberInput(fields.find((field) => field.name === 'termYears')?.value || '')
-
-    if (homePrice <= 0 || downPayment < 0 || interestRate < 0 || years <= 0 || downPayment >= homePrice) {
-      setFormError('Please enter valid values and ensure the down payment is less than the home price.')
-      return
-    }
-
-    const result = calculateMortgage(homePrice, downPayment, interestRate, years)
-    setResults([
-      { label: 'Monthly mortgage payment', value: formatMoney(result.monthlyPayment) },
-      { label: 'Total payment', value: formatMoney(result.totalPayment) },
-      { label: 'Total interest', value: formatMoney(result.totalInterest) },
-    ])
-  }
-
   return (
     <CalculatorLayout
       title='Mortgage Calculator'
       description='Estimate mortgage payments, total interest cost, and your home loan payment schedule.'>
-      <div className='grid gap-8 lg:grid-cols-[1.3fr_0.9fr]'>
-        <div>
-          <CalculatorForm
-            fields={fields}
-            onChange={handleChange}
-            onSubmit={handleSubmit}
-            buttonText='Calculate Mortgage'
-          />
-          {formError && (
-            <p className='mt-4 rounded-2xl bg-red-50 p-4 text-sm text-red-700 dark:bg-red-950/70 dark:text-red-300'>
-              {formError}
-            </p>
-          )}
-        </div>
-        <ResultCard results={results} />
-      </div>
+      
+      <MortgageClient />
+
       <section className='mt-20 border-t border-slate-100 dark:border-slate-800 pt-16'>
         <div className='max-w-4xl mx-auto'>
           <div className='prose prose-lg max-w-none text-slate-600 dark:text-slate-400 dark:prose-invert'>
