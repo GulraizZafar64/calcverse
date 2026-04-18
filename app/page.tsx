@@ -3,9 +3,10 @@ import type { CalculatorCardType } from './types/calculator'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Financial Calculators & Money Tools',
+  title: 'Financial Calculators & Money Planning Tools | CalcVerse',
   description:
-    'Easy financial calculators for loans, mortgages, investments and salary after tax. Get accurate results, formulas, and guidance.',
+    'Free, accurate financial calculators for loan EMI, mortgages, compound interest, and salary after tax. Plan your financial future with CalcVerse.',
+  keywords: ['financial calculators', 'loan emi calculator', 'mortgage payment calculator', 'investment growth calculator', 'salary tax calculator'],
 }
 
 const calculators: CalculatorCardType[] = [
