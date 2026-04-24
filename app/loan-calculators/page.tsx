@@ -19,6 +19,24 @@ const loanCalculators: CalculatorCardType[] = [
     href: '/mortgage',
     category: 'loan',
   },
+  {
+    name: 'Simple Interest Calculator',
+    description: 'Calculate simple interest earned or owed using the classic P×R×T formula.',
+    href: '/simple-interest',
+    category: 'loan',
+  },
+  {
+    name: 'Car Loan Calculator',
+    description: 'Estimate monthly auto loan payments and the total financing cost for your next vehicle.',
+    href: '/car-loan',
+    category: 'loan',
+  },
+  {
+    name: 'Debt Payoff Calculator',
+    description: 'Find out how long it will take to eliminate any debt and how much interest you will pay.',
+    href: '/debt-payoff',
+    category: 'loan',
+  },
 ]
 
 const LoanCalculatorsPage = () => {

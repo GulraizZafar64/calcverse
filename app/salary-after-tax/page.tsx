@@ -1,5 +1,6 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout'
 import SalaryAfterTaxClient from './SalaryAfterTaxClient'
+import FaqAccordion from '@/app/components/FaqAccordion'
 
 export const metadata = {
   title: 'Salary After Tax Calculator | Financial Tools',
@@ -10,7 +11,9 @@ const SalaryAfterTaxPage = () => {
   return (
     <CalculatorLayout
       title='Salary After Tax Calculator'
-      description='Calculate your take-home pay after taxes to understand your monthly and yearly net income.'>
+      description='Calculate your take-home pay after taxes to understand your monthly and yearly net income.'
+      author='CalcVerse Editorial Team'
+      lastUpdated='April 2026'>
       
       <SalaryAfterTaxClient />
 
@@ -28,7 +31,7 @@ const SalaryAfterTaxPage = () => {
             <div className='bg-orange-50 dark:bg-orange-900/20 p-8 rounded-3xl my-10 border border-orange-100 dark:border-orange-800'>
               <h3 className='text-2xl font-bold text-orange-900 dark:text-orange-300 mb-4'>Gross vs. Net Income</h3>
               <p className='text-orange-800 dark:text-orange-400'>
-                It's important to distinguish between these two terms:
+                It&apos;s important to distinguish between these two terms:
               </p>
               <ul className='space-y-4 mt-4'>
                 <li><strong>Gross Income:</strong> Your total earnings before any taxes or deductions are taken out. This is the figure typically used when discussing salaries and job offers.</li>
@@ -79,6 +82,28 @@ const SalaryAfterTaxPage = () => {
             <p className='mt-10 p-6 bg-slate-50 dark:bg-slate-900 rounded-2xl border-l-4 border-orange-500 italic text-slate-600 dark:text-slate-400'>
               Note: Tax laws vary significantly by country and region. This calculator is a tool for estimation and should not be used for filing official tax returns.
             </p>
+
+            <h2 className='text-3xl font-bold text-slate-900 dark:text-white mt-20 mb-8'>Frequently Asked Questions</h2>
+            <FaqAccordion 
+              faqs={[
+                {
+                  q: "What are 'Pre-Tax Deductions'?",
+                  a: "Pre-tax deductions are amounts taken out of your gross pay before taxes are calculated. These include 401(k) contributions, health insurance premiums, and HSA/FSA contributions. Because they reduce your taxable income, they effectively lower the amount of tax you owe."
+                },
+                {
+                  q: "How do progressive tax brackets work?",
+                  a: "In a progressive tax system, you only pay the higher tax rate on the portion of your income that falls into that bracket. For example, moving into a higher bracket doesn't mean your entire salary is taxed at that rate — only the amount above the bracket threshold is."
+                },
+                {
+                  q: "Is bonus income taxed differently than regular salary?",
+                  a: "While bonuses are often withheld at a higher flat rate (often 22% in the US), they are ultimately taxed at your standard marginal income tax rate when you file your annual return. Any over-withholding is usually refunded to you."
+                },
+                {
+                  q: "Why is my take-home pay different each month?",
+                  a: "Variations can occur if you work overtime, receive commissions, or if certain limits (like Social Security tax caps) are reached later in the year. Additionally, some insurance premiums or union dues may be deducted on specific pay cycles."
+                }
+              ]}
+            />
           </div>
         </div>
       </section>

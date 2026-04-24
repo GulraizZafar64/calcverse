@@ -1,5 +1,6 @@
 import CalculatorLayout from '@/app/components/CalculatorLayout'
 import MortgageClient from './MortgageClient'
+import FaqAccordion from '@/app/components/FaqAccordion'
 
 export const metadata = {
   title: 'Mortgage Calculator | Financial Tools',
@@ -10,7 +11,9 @@ const MortgagePage = () => {
   return (
     <CalculatorLayout
       title='Mortgage Calculator'
-      description='Estimate mortgage payments, total interest cost, and your home loan payment schedule.'>
+      description='Estimate mortgage payments, total interest cost, and your home loan payment schedule.'
+      author='CalcVerse Editorial Team'
+      lastUpdated='April 2026'>
       
       <MortgageClient />
 
@@ -26,7 +29,7 @@ const MortgagePage = () => {
             </p>
 
             <div className='bg-emerald-50 dark:bg-emerald-900/20 p-8 rounded-3xl my-10 border border-emerald-100 dark:border-emerald-800'>
-              <h3 className='text-2xl font-bold text-emerald-900 dark:text-emerald-300 mb-4'>What's in a Mortgage Payment?</h3>
+              <h3 className='text-2xl font-bold text-emerald-900 dark:text-emerald-300 mb-4'>What&apos;s in a Mortgage Payment?</h3>
               <p className='text-emerald-800 dark:text-emerald-400'>
                 A standard mortgage payment is often referred to as <strong>PITI</strong>:
               </p>
@@ -67,9 +70,31 @@ const MortgagePage = () => {
             <ul className='list-decimal pl-6 space-y-4'>
               <li><strong>Check Your Credit Score:</strong> A higher credit score can save you thousands of dollars through a lower interest rate.</li>
               <li><strong>Get Pre-Approved:</strong> Before house hunting, get a pre-approval letter from a lender to know exactly what you can afford.</li>
-              <li><strong>Don't Forget Closing Costs:</strong> Budget an additional 2-5% of the home price for taxes, lender fees, and title insurance.</li>
+              <li><strong>Don&apos;t Forget Closing Costs:</strong> Budget an additional 2-5% of the home price for taxes, lender fees, and title insurance.</li>
               <li><strong>Maintain an Emergency Fund:</strong> Homeownership comes with unexpected repairs. Ensure you have cash set aside after your down payment.</li>
             </ul>
+
+            <h2 className='text-3xl font-bold text-slate-900 dark:text-white mt-20 mb-8'>Frequently Asked Questions</h2>
+            <FaqAccordion 
+              faqs={[
+                {
+                  q: "What is Private Mortgage Insurance (PMI)?",
+                  a: "PMI is a type of insurance that protects the lender if you stop making payments on your loan. It is usually required if your down payment is less than 20% of the home's value. You can typically request to cancel PMI once your home equity reaches 20%."
+                },
+                {
+                  q: "What is the difference between an ARM and a Fixed-Rate Mortgage?",
+                  a: "A fixed-rate mortgage has the same interest rate for the entire life of the loan. An Adjustable-Rate Mortgage (ARM) has a lower initial interest rate for a set period (e.g., 5 or 7 years), after which the rate can change periodically based on market indices."
+                },
+                {
+                  q: "What are 'points' in a mortgage?",
+                  a: "Mortgage points (or discount points) are fees paid directly to the lender at closing in exchange for a reduced interest rate. One point typically costs 1% of the total loan amount and lowers your interest rate by 0.25%."
+                },
+                {
+                  q: "How does my debt-to-income (DTI) ratio affect my mortgage?",
+                  a: "DTI is the percentage of your gross monthly income that goes toward paying debts. Lenders use this to determine your ability to manage monthly payments. Most lenders prefer a DTI ratio of 43% or lower to qualify for a conventional mortgage."
+                }
+              ]}
+            />
           </div>
         </div>
       </section>

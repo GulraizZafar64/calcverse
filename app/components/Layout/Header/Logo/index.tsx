@@ -10,7 +10,6 @@ const Logo = () => {
       </div>
       <div className='flex flex-col'>
         <span className='text-xl font-bold text-darkblue dark:text-white'>CalcVerse</span>
-        <span className='text-xs text-slate-500 dark:text-slate-400'>Smart Financial Solutions</span>
       </div>
     </Link>
   )

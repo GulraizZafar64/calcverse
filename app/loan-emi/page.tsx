@@ -4,6 +4,7 @@ import { useState } from 'react'
 import CalculatorLayout from '@/app/components/CalculatorLayout'
 import CalculatorForm from '@/app/components/CalculatorForm'
 import ResultCard from '@/app/components/ResultCard'
+import FaqAccordion from '@/app/components/FaqAccordion'
 import { calculateEmi, formatMoney, parseNumberInput } from '@/app/lib/calculators'
 import type { CalculatorField, ResultItem } from '@/app/types/calculator'
 
@@ -70,7 +71,9 @@ const LoanEmiCalculatorPage = () => {
   return (
     <CalculatorLayout
       title='Loan EMI Calculator'
-      description='Calculate monthly loan payments, total interest cost, and total repayment for any loan term.'>
+      description='Calculate monthly loan payments, total interest cost, and total repayment for any loan term.'
+      author='CalcVerse Editorial Team'
+      lastUpdated='April 2026'>
       <div className='grid gap-8 lg:grid-cols-[1.3fr_0.9fr]'>
         <div>
           <CalculatorForm
@@ -116,7 +119,7 @@ const LoanEmiCalculatorPage = () => {
 
             <h3 className='text-2xl font-bold text-slate-900 dark:text-white mt-12 mb-6'>Example Calculation</h3>
             <p>
-              Let's say you borrow <strong>$10,000</strong> at an annual interest rate of <strong>10%</strong> for a period of <strong>2 years</strong> (24 months).
+              Let&apos;s say you borrow <strong>$10,000</strong> at an annual interest rate of <strong>10%</strong> for a period of <strong>2 years</strong> (24 months).
             </p>
             <ul className='list-disc pl-6 space-y-2'>
               <li>Principal (P): $10,000</li>
@@ -161,6 +164,28 @@ const LoanEmiCalculatorPage = () => {
             <p className='mt-10 p-6 bg-slate-50 dark:bg-slate-900 rounded-2xl border-l-4 border-blue-600 italic'>
               Pro Tip: Try to keep your total EMIs (including home, car, and personal loans) under 40% of your take-home salary to maintain financial stability.
             </p>
+
+            <h2 className='text-3xl font-bold text-slate-900 dark:text-white mt-20 mb-8'>Frequently Asked Questions</h2>
+            <FaqAccordion 
+              faqs={[
+                {
+                  q: "What is the difference between a fixed and floating interest rate?",
+                  a: "A fixed interest rate remains the same throughout the loan tenure, providing certainty in your EMI. A floating rate changes based on market conditions, meaning your EMI can go up or down over time."
+                },
+                {
+                  q: "How does a loan prepayment affect my EMI?",
+                  a: "When you make a prepayment, you can usually choose to either reduce your monthly EMI amount or shorten your loan tenure. Most financial experts recommend shortening the tenure as it saves you more in total interest."
+                },
+                {
+                  q: "What are 'Processing Fees' in a loan?",
+                  a: "Processing fees are one-time charges levied by lenders to process your loan application. These are usually 0.5% to 2% of the loan amount and are either deducted from the loan disbursement or paid upfront."
+                },
+                {
+                  q: "Can I get a loan with a 0% interest rate?",
+                  a: "Some retailers offer 'No Cost EMI' which appears to be 0% interest. However, the interest is often built into the product price or the discount you would have received for a cash payment is withheld."
+                }
+              ]}
+            />
           </div>
         </div>
       </section>

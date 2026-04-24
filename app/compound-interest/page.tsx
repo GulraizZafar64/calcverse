@@ -4,6 +4,7 @@ import { useState } from 'react'
 import CalculatorLayout from '@/app/components/CalculatorLayout'
 import CalculatorForm from '@/app/components/CalculatorForm'
 import ResultCard from '@/app/components/ResultCard'
+import FaqAccordion from '@/app/components/FaqAccordion'
 import { calculateCompoundInterest, formatMoney, parseNumberInput } from '@/app/lib/calculators'
 import type { CalculatorField, ResultItem } from '@/app/types/calculator'
 
@@ -74,7 +75,9 @@ const CompoundInterestPage = () => {
   return (
     <CalculatorLayout
       title='Compound Interest Calculator'
-      description='See how your investment balance grows over time with regular contributions and compound interest.'>
+      description='See how your investment balance grows over time with regular contributions and compound interest.'
+      author='CalcVerse Editorial Team'
+      lastUpdated='April 2026'>
       <div className='grid gap-8 lg:grid-cols-[1.3fr_0.9fr]'>
         <div>
           <CalculatorForm
@@ -96,7 +99,7 @@ const CompoundInterestPage = () => {
           <div className='prose prose-lg max-w-none text-slate-600 dark:text-slate-400 dark:prose-invert'>
             <h2 className='text-3xl font-bold text-slate-900 dark:text-white mb-6 underline decoration-blue-500 underline-offset-8'>The Power of Compound Interest</h2>
             <p>
-              Albert Einstein reportedly called compound interest the "eighth wonder of the world." Those who understand it, earn it; those who don't, pay it. Compound interest is the interest on a loan or deposit calculated based on both the initial principal and the accumulated interest from previous periods.
+              Albert Einstein reportedly called compound interest the "eighth wonder of the world." Those who understand it, earn it; those who don&apos;t, pay it. Compound interest is the interest on a loan or deposit calculated based on both the initial principal and the accumulated interest from previous periods.
             </p>
             <p>
               At <strong>CalcVerse</strong>, our Compound Interest Calculator helps you visualize how small, consistent contributions can grow into a substantial nest egg over time. By reinvesting your earnings, your money starts to work for you, creating a snowball effect that accelerates wealth creation.
@@ -121,7 +124,7 @@ const CompoundInterestPage = () => {
 
             <h3 className='text-2xl font-bold text-slate-900 dark:text-white mt-12 mb-6'>Why Start Saving Early?</h3>
             <p>
-              The most critical factor in compound interest isn't the interest rate or the amount of money—it's <strong>time</strong>. The longer your money has to compound, the more dramatic the results will be.
+              The most critical factor in compound interest isn&apos;t the interest rate or the amount of money—it&apos;s <strong>time</strong>. The longer your money has to compound, the more dramatic the results will be.
             </p>
             <div className='grid md:grid-cols-2 gap-6 my-8'>
               <div className='p-6 bg-slate-50 dark:bg-slate-900 rounded-2xl'>
@@ -139,9 +142,9 @@ const CompoundInterestPage = () => {
               Imagine you start with <strong>$1,000</strong> and add <strong>$100</strong> every month at an <strong>8%</strong> annual return.
             </p>
             <ul className='list-disc pl-6 space-y-2'>
-              <li>After 10 Years: You'll have ~$19,000</li>
-              <li>After 20 Years: You'll have ~$60,000</li>
-              <li>After 30 Years: You'll have ~$150,000</li>
+              <li>After 10 Years: You&apos;ll have ~$19,000</li>
+              <li>After 20 Years: You&apos;ll have ~$60,000</li>
+              <li>After 30 Years: You&apos;ll have ~$150,000</li>
             </ul>
             <p className='mt-4'>
               Notice how the growth between year 20 and 30 ($90,000) is much larger than the growth between year 0 and 10 ($18,000). That is the power of compounding in action!
@@ -149,11 +152,33 @@ const CompoundInterestPage = () => {
 
             <h3 className='text-2xl font-bold text-slate-900 dark:text-white mt-12 mb-6'>Tips for Maximizing Growth</h3>
             <ul className='list-decimal pl-6 space-y-4'>
-              <li><strong>Automate Your Savings:</strong> Set up a direct transfer to your investment account so you never "forget" to contribute.</li>
+              <li><strong>Automate Your Savings:</strong> Set up a direct transfer to your investment account so you never &quot;forget&quot; to contribute.</li>
               <li><strong>Reinvest Dividends:</strong> Instead of taking cash payouts, reinvest them to increase your compounding principal.</li>
               <li><strong>Minimize Fees:</strong> High management fees can eat away at your compounding returns over decades.</li>
               <li><strong>Increase Contributions:</strong> As your income grows, try to increase your monthly contribution by even a small percentage.</li>
             </ul>
+
+            <h2 className='text-3xl font-bold text-slate-900 dark:text-white mt-20 mb-8'>Frequently Asked Questions</h2>
+            <FaqAccordion 
+              faqs={[
+                {
+                  q: "What is the difference between simple and compound interest?",
+                  a: "Simple interest is calculated only on the principal amount of a loan or deposit. Compound interest is calculated on the principal amount and also on the accumulated interest of previous periods. In short, compound interest is 'interest on interest'."
+                },
+                {
+                  q: "How does the compounding frequency affect my investment?",
+                  a: "The more frequently interest is compounded, the higher the final amount will be. For example, interest compounded daily will grow faster than interest compounded annually at the same rate, because your interest starts earning its own interest much sooner."
+                },
+                {
+                  q: "What is the 'Rule of 72'?",
+                  a: "The Rule of 72 is a quick way to estimate how long it will take to double your money with compound interest. Simply divide 72 by your annual interest rate. For example, at a 6% return, it will take roughly 12 years (72/6) to double your investment."
+                },
+                {
+                  q: "Are compound interest returns guaranteed?",
+                  a: "Compound interest is a mathematical formula, but the 'interest rate' used in the calculation depends on your investment vehicle. Savings accounts or CDs have fixed, guaranteed rates, while stock market investments have variable returns that are not guaranteed."
+                }
+              ]}
+            />
           </div>
         </div>
       </section>

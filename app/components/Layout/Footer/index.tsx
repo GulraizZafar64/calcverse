@@ -32,20 +32,12 @@ const Footer = () => {
           </div>
           <div className='flex sm:flex-row flex-col sm:items-center gap-8'>
             <p className='text-darkblue dark:text-white text-lg font-medium'>
-              Newsletter
+              Stay Connected
             </p>
-            <div className='relative'>
-              <input
-                type='email'
-                name='email'
-                placeholder='Email Address*'
-                className='py-2.5 pl-3 pr-32 text-sm rounded-lg placeholder:text-lightgrey border border-lightgrey/30 focus:border-primary focus:outline-0 w-full'
-              />
-              <div className='absolute bottom-0 right-0'>
-                <button className='px-4 py-2 bg-primary text-white rounded-lg outline-none hover:bg-transparent hover:text-primary border border-primary duration-500 text-base font-semibold'>
-                  Subscribe
-                </button>
-              </div>
+            <div className='flex gap-4'>
+              <Link href='mailto:contact@calcverse.site' className='px-4 py-2 bg-primary text-white rounded-lg outline-none hover:bg-transparent hover:text-primary border border-primary duration-500 text-base font-semibold'>
+                Email Us
+              </Link>
             </div>
           </div>
         </div>
@@ -122,19 +114,6 @@ const Footer = () => {
               <p className='text-base font-normal text-offwhite'>
                 Online Service - Global Support
               </p>
-            </div>
-            <div className='flex gap-2 mt-10'>
-              <Icon
-                icon={'tabler:phone'}
-                width={22}
-                height={22}
-                className='text-lightgrey'
-              />
-              <Link href='tel:+18005550199'>
-                <p className='text-base font-normal text-offwhite hover:text-primary dark:hover:text-primary'>
-                  +1 (800) 555-0199
-                </p>
-              </Link>
             </div>
             <div className='flex gap-2 mt-10'>
               <Icon

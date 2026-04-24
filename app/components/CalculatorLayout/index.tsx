@@ -5,6 +5,8 @@ type CalculatorLayoutProps = {
   description: string
   children: ReactNode
   aside?: ReactNode
+  author?: string
+  lastUpdated?: string
 }
 
 const CalculatorLayout: React.FC<CalculatorLayoutProps> = ({
@@ -12,6 +14,8 @@ const CalculatorLayout: React.FC<CalculatorLayoutProps> = ({
   description,
   children,
   aside,
+  author,
+  lastUpdated,
 }) => {
   return (
     <main className='container py-20'>
@@ -26,6 +30,13 @@ const CalculatorLayout: React.FC<CalculatorLayoutProps> = ({
           <p className='mt-6 max-w-3xl text-base leading-8 text-slate-600 dark:text-slate-300'>
             {description}
           </p>
+          {(author || lastUpdated) && (
+            <p className='mt-4 text-sm text-slate-500 dark:text-slate-400'>
+              {author && <span>Reviewed by <strong>{author}</strong></span>}
+              {author && lastUpdated && <span className='mx-2'>·</span>}
+              {lastUpdated && <span>Last updated: {lastUpdated}</span>}
+            </p>
+          )}
         </div>
         {aside && <div>{aside}</div>}
       </section>

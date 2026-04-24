@@ -13,6 +13,12 @@ const salaryCalculators: CalculatorCardType[] = [
     href: '/salary-after-tax',
     category: 'salary',
   },
+  {
+    name: 'Hourly to Annual Salary Calculator',
+    description: 'Convert your hourly wage into weekly, monthly, and annual salary figures instantly.',
+    href: '/hourly-to-salary',
+    category: 'salary',
+  },
 ]
 
 const SalaryCalculatorsPage = () => {

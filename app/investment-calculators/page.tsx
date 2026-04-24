@@ -13,6 +13,24 @@ const investmentCalculators: CalculatorCardType[] = [
     href: '/compound-interest',
     category: 'investment',
   },
+  {
+    name: 'Retirement Savings Calculator',
+    description: 'Project your retirement nest egg based on current savings, monthly contributions, and expected returns.',
+    href: '/retirement-savings',
+    category: 'investment',
+  },
+  {
+    name: 'ROI Calculator',
+    description: 'Measure the return on any investment by calculating net profit and ROI percentage instantly.',
+    href: '/roi-calculator',
+    category: 'investment',
+  },
+  {
+    name: 'Inflation Calculator',
+    description: "See how inflation erodes purchasing power and what today's dollars will be worth in the future.",
+    href: '/inflation-calculator',
+    category: 'investment',
+  },
 ]
 
 const InvestmentCalculatorsPage = () => {
