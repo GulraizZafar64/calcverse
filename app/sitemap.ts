@@ -29,9 +29,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		'/inflation-calculator',
 		'/hourly-to-salary',
 		'/debt-payoff',
+		'/bmi-calculator',
+		'/age-calculator',
+		'/percentage-calculator',
+		'/tip-calculator',
 		'/loan-calculators',
 		'/investment-calculators',
 		'/salary-calculators',
+		'/health-lifestyle-calculators',
+		'/math-tools',
+		'/calculators',
 	];
 
 	return routes.map((route) => ({

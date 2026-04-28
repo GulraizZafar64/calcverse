@@ -65,6 +65,40 @@ const AboutPage = () => {
         </div>
       </section>
 
+      <section className='mt-24'>
+        <div className='rounded-3xl border border-slate-100 bg-white p-10 lg:p-16 dark:border-slate-800 dark:bg-slate-900'>
+          <div className='max-w-3xl'>
+            <h2 className='text-3xl font-bold text-slate-900 dark:text-white mb-6'>Editorial Standards & Accuracy</h2>
+            <p className='text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-8'>
+              At CalcVerse, we take the accuracy of our financial information seriously. Our content and tools go through a rigorous review process:
+            </p>
+            <div className='space-y-8'>
+              <div className='flex gap-6'>
+                <div className='h-12 w-12 rounded-2xl bg-blue-50 dark:bg-blue-900/30 flex-shrink-0 flex items-center justify-center text-blue-600 font-bold'>01</div>
+                <div>
+                  <h4 className='text-xl font-bold text-slate-900 dark:text-white mb-2'>Expert Verification</h4>
+                  <p className='text-slate-600 dark:text-slate-400'>Every formula used in our calculators is based on standard financial mathematics and cross-checked against official banking and government resources.</p>
+                </div>
+              </div>
+              <div className='flex gap-6'>
+                <div className='h-12 w-12 rounded-2xl bg-blue-50 dark:bg-blue-900/30 flex-shrink-0 flex items-center justify-center text-blue-600 font-bold'>02</div>
+                <div>
+                  <h4 className='text-xl font-bold text-slate-900 dark:text-white mb-2'>Regular Updates</h4>
+                  <p className='text-slate-600 dark:text-slate-400'>Tax laws and financial regulations change. Our team reviews and updates our calculators (like the Salary After Tax tool) annually to reflect the latest changes.</p>
+                </div>
+              </div>
+              <div className='flex gap-6'>
+                <div className='h-12 w-12 rounded-2xl bg-blue-50 dark:bg-blue-900/30 flex-shrink-0 flex items-center justify-center text-blue-600 font-bold'>03</div>
+                <div>
+                  <h4 className='text-xl font-bold text-slate-900 dark:text-white mb-2'>Transparent Sourcing</h4>
+                  <p className='text-slate-600 dark:text-slate-400'>When we provide advice or guides on our blog, we cite reputable sources and provide clear explanations of the concepts involved.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className='mt-24 rounded-3xl bg-blue-600 p-12 lg:p-20 text-white'>
         <div className='max-w-4xl mx-auto text-center'>
           <h2 className='text-3xl lg:text-5xl font-bold mb-8'>Ready to take control of your finances?</h2>

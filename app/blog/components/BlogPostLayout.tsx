@@ -166,7 +166,7 @@ const BlogPostLayout = ({
                 
                 <div className='mt-12 flex items-center justify-center gap-8 text-slate-400 dark:text-slate-600'>
                    <Link href='/privacy-policy' className='text-xs font-bold uppercase tracking-widest hover:text-blue-600'>Privacy</Link>
-                   <Link href='/terms' className='text-xs font-bold uppercase tracking-widest hover:text-blue-600'>Terms</Link>
+                   <Link href='/terms-of-service' className='text-xs font-bold uppercase tracking-widest hover:text-blue-600'>Terms</Link>
                    <Link href='/contact' className='text-xs font-bold uppercase tracking-widest hover:text-blue-600'>Feedback</Link>
                 </div>
               </footer>

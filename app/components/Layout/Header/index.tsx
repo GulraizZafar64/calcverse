@@ -117,7 +117,7 @@ const Header: React.FC = () => {
           </button>
           
           <Link
-            href='/#contact'
+            href='/contact'
             className='hidden xl:flex px-6 py-2.5 bg-blue-600 text-white rounded-xl shadow-lg shadow-blue-500/20 hover:bg-blue-700 hover:shadow-blue-500/40 transition-all duration-300 text-sm font-bold items-center'>
             Contact Us
           </Link>
@@ -169,7 +169,7 @@ const Header: React.FC = () => {
           ))}
           <div className='mt-4 flex flex-col gap-4 w-full'>
             <Link
-              href='/#contact'
+              href='/contact'
               className='px-4 py-2 bg-primary text-white rounded-lg outline-none hover:bg-transparent hover:text-primary border border-primary duration-500 text-base font-semibold'
               onClick={() => {
                 setNavbarOpen(false)

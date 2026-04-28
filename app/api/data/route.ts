@@ -91,43 +91,43 @@ const RecordData: RecordType[] = [
 	{
 		imgSrc: '/images/records/star.svg',
 		digit: '4.9 Rating',
-		desc: 'Rated by 3,500+ clients on Google and Clutch platforms',
+		desc: 'Accurate calculations cross-verified against financial standards',
 	},
 	{
 		imgSrc: '/images/records/user.svg',
-		digit: '3,500+ Clients',
-		desc: 'Trusted by global brands for design and digital solutions',
+		digit: '100% Private',
+		desc: 'All calculations are performed locally in your browser',
 	},
 	{
 		imgSrc: '/images/records/cart.svg',
-		digit: '$45M+ Revenue',
-		desc: 'Generated through websites, apps, and marketing globally',
+		digit: 'Free Forever',
+		desc: 'Professional tools accessible to everyone without registration',
 	},
 	{
 		imgSrc: '/images/records/star.svg',
-		digit: '500+ Projects',
-		desc: 'Delivered websites, branding, and full digital experiences worldwide',
+		digit: '20+ Tools',
+		desc: 'Comprehensive suite for loans, investments, and tax planning',
 	},
 ];
 
 const ReviewData: ReviewType[] = [
 	{
 		imgSrc: '/images/review/daniel.webp',
-		name: 'Daniel Reid',
-		rating: 4.2,
-		desc: 'Pixelize nailed our website redesign. Clean layout, fast loading, and mobile-friendly. Highly recommended!',
+		name: 'Sarah J.',
+		rating: 5.0,
+		desc: 'CalcVerse made it so easy to compare mortgage options. The breakdown of interest vs principal is incredibly helpful.',
 	},
 	{
 		imgSrc: '/images/review/sophia.webp',
-		name: 'Sophia Turner',
-		rating: 4.5,
-		desc: 'The UI/UX improvements boosted our user engagement and conversions. Truly a professional team!',
+		name: 'Michael R.',
+		rating: 4.8,
+		desc: 'Finally, a clean calculator site that doesn\'t spam me with popups. The compound interest tool is my favorite.',
 	},
 	{
 		imgSrc: '/images/review/marcus.webp',
-		name: 'Marcus Lee',
-		rating: 4.8,
-		desc: 'They understood our brand vision perfectly and delivered a logo that stands out in our industry.',
+		name: 'David L.',
+		rating: 4.9,
+		desc: 'The salary-to-hourly converter helped me negotiate my new job offer with confidence. Highly recommend!',
 	},
 ];
 

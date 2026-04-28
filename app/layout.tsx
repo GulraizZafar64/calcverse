@@ -5,6 +5,7 @@ import Header from './components/Layout/Header'
 import { ThemeProvider } from 'next-themes'
 import Footer from './components/Layout/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import CookieConsent from './components/CookieConsent'
 import Script from 'next/script'
 
 const DMSans = DM_Sans({
@@ -88,6 +89,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <ScrollToTop />
+          <CookieConsent />
         </ThemeProvider>
       </body>
     </html>

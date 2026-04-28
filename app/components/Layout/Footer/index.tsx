@@ -35,15 +35,7 @@ const Footer = () => {
             <p className='text-slate-600 dark:text-slate-400 text-base leading-relaxed max-w-sm'>
               Empowering your financial future with accurate, private, and professional-grade calculators. Plan your loans, investments, and taxes with confidence.
             </p>
-            <div className='flex items-center gap-4'>
-              <Link 
-                href='mailto:contact@calcverse.site' 
-                className='inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-2xl hover:bg-blue-700 transition-all duration-300 font-bold text-sm shadow-lg shadow-blue-500/25'
-              >
-                <Icon icon="lucide:mail" className="w-4 h-4" />
-                Email Support
-              </Link>
-            </div>
+
           </div>
 
           {/* Links Columns */}
