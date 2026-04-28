@@ -27,7 +27,7 @@ const CookieConsent = () => {
           <div className='flex-1'>
             <h3 className='text-lg font-bold text-slate-900 dark:text-white mb-2'>We respect your privacy</h3>
             <p className='text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed'>
-              We use cookies to enhance your experience, serve personalized ads (via Google AdSense), and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. Read our <Link href="/privacy-policy" className="text-blue-600 hover:underline">Privacy Policy</Link> for more details.
+              We use cookies to enhance your experience, serve personalized ads (via Google AdSense), and analyze our traffic. By clicking &quot;Accept All&quot;, you consent to our use of cookies. Read our <Link href="/privacy-policy" className="text-blue-600 hover:underline">Privacy Policy</Link> for more details.
             </p>
           </div>
           <div className='flex items-center gap-4 w-full md:w-auto'>

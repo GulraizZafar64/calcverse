@@ -47,14 +47,15 @@ const BMICalculatorPage = () => {
   const handleChange = (name: string, value: string) => {
     setFields((current) =>
       current.map((field) => {
-        if (field.name === name) {
-          if (name === 'unit') {
-            // Update placeholders when unit changes
-            const weightPlaceholder = value === 'metric' ? 'Enter weight in kg' : 'Enter weight in lbs'
-            const heightPlaceholder = value === 'metric' ? 'Enter height in cm' : 'Enter height in inches'
-            
-            return { ...field, value }
+        if (name === 'unit') {
+          if (field.name === 'weight') {
+            return { ...field, placeholder: value === 'metric' ? 'Enter weight in kg' : 'Enter weight in lbs' }
           }
+          if (field.name === 'height') {
+            return { ...field, placeholder: value === 'metric' ? 'Enter height in cm' : 'Enter height in inches' }
+          }
+        }
+        if (field.name === name) {
           return { ...field, value }
         }
         return field

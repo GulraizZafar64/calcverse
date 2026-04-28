@@ -1,3 +1,4 @@
+import Link from 'next/link'
 export const metadata = {
   title: 'About CalcVerse | Professional Financial Planning Tools',
   description: 'Learn about CalcVerse, our mission to provide accurate financial calculators, and how we help users make informed money decisions through professional-grade tools.',
@@ -18,7 +19,7 @@ const AboutPage = () => {
             At CalcVerse, we believe that financial literacy should be accessible to everyone. Our mission is to provide professional-grade financial tools that simplify complex calculations, helping you plan for loans, investments, mortgages, and taxes with absolute confidence.
           </p>
           <p className='mt-4 max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-400'>
-            Since our inception, we have focused on building tools that are not just numbers-oriented but educational. We want our users to understand the "how" and "why" of their financial projections.
+            Since our inception, we have focused on building tools that are not just numbers-oriented but educational. We want our users to understand the &quot;how&quot; and &quot;why&quot; of their financial projections.
           </p>
         </div>
         <div className='rounded-3xl border border-slate-100 bg-white p-10 shadow-xl dark:border-slate-800 dark:bg-slate-900'>
@@ -106,12 +107,12 @@ const AboutPage = () => {
             Join thousands of users who trust CalcVerse for their daily financial planning. Our tools are free, fast, and always accurate.
           </p>
           <div className='flex flex-wrap justify-center gap-4'>
-            <a href='/' className='px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-blue-50 transition-colors'>
+            <Link href='/' className='px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-blue-50 transition-colors'>
               Explore Calculators
-            </a>
-            <a href='/contact' className='px-8 py-4 bg-blue-700 text-white font-bold rounded-xl hover:bg-blue-800 transition-colors border border-blue-500'>
+            </Link>
+            <Link href='/contact' className='px-8 py-4 bg-blue-700 text-white font-bold rounded-xl hover:bg-blue-800 transition-colors border border-blue-500'>
               Contact Our Team
-            </a>
+            </Link>
           </div>
         </div>
       </section>

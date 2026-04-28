@@ -305,7 +305,7 @@ export default function Home() {
                     <h4 className='text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2'>
                       <span className='text-blue-600'>✓</span> 100% Privacy
                     </h4>
-                    <p className='text-sm leading-relaxed'>Your data never leaves your browser. We don't store or see your financial numbers.</p>
+                    <p className='text-sm leading-relaxed'>Your data never leaves your browser. We don&apos;t store or see your financial numbers.</p>
                   </div>
                   <div className='space-y-2'>
                     <h4 className='text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2'>
@@ -534,7 +534,7 @@ export default function Home() {
               <div>
                 <h2 className='text-3xl font-bold text-slate-900 dark:text-white mb-4'>Built for Transparency & Accuracy</h2>
                 <p className='text-slate-600 dark:text-slate-400 leading-relaxed'>
-                  CalcVerse was founded on the principle that financial literacy should be accessible to everyone. We've spent countless hours refining our algorithms to match industry standards, ensuring that whether you're buying your first home or planning for retirement, you're getting data you can trust.
+                  CalcVerse was founded on the principle that financial literacy should be accessible to everyone. We&apos;ve spent countless hours refining our algorithms to match industry standards, ensuring that whether you&apos;re buying your first home or planning for retirement, you&apos;re getting data you can trust.
                 </p>
               </div>
               <div className='grid sm:grid-cols-2 gap-8'>

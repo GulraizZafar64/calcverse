@@ -80,7 +80,7 @@ const MathToolsPage = () => {
                   </div>
                   <div>
                     <h3 className='text-xl font-bold text-slate-900 dark:text-white mb-2'>Instant Results</h3>
-                    <p className='text-slate-600 dark:text-slate-400'>Get your answers as you type. No need to click "calculate" for every small change.</p>
+                    <p className='text-slate-600 dark:text-slate-400'>Get your answers as you type. No need to click &quot;calculate&quot; for every small change.</p>
                   </div>
                 </div>
                 <div className='flex gap-4'>

@@ -77,7 +77,7 @@ const LoanCalculatorsPage = () => {
             Made Simple.
           </h1>
           <p className='mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-400 font-medium'>
-            Empower your borrowing decisions with our collection of professional loan calculators. Whether you're planning for a new car, a home, or a personal expense, CalcVerse provides the clarity you need to manage your debt effectively.
+            Empower your borrowing decisions with our collection of professional loan calculators. Whether you&apos;re planning for a new car, a home, or a personal expense, CalcVerse provides the clarity you need to manage your debt effectively.
           </p>
         </div>
       </section>

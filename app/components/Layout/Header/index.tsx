@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useCallback } from 'react'
 import Logo from './Logo'
 import HeaderLink from './Navigation/HeaderLink'
 import MobileHeaderLink from './Navigation/MobileHeaderLink'
@@ -34,11 +34,11 @@ const Header: React.FC = () => {
     fetchData()
   }, [])
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     setSticky(window.scrollY >= 80)
-  }
+  }, [])
 
-  const handleClickOutside = (event: MouseEvent) => {
+  const handleClickOutside = useCallback((event: MouseEvent) => {
     if (
       signInRef.current &&
       !signInRef.current.contains(event.target as Node)
@@ -58,7 +58,7 @@ const Header: React.FC = () => {
     ) {
       setNavbarOpen(false)
     }
-  }
+  }, [navbarOpen])
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
@@ -67,7 +67,7 @@ const Header: React.FC = () => {
       window.removeEventListener('scroll', handleScroll)
       document.removeEventListener('mousedown', handleClickOutside)
     }
-  }, [navbarOpen, isSignInOpen, isSignUpOpen])
+  }, [handleScroll, handleClickOutside])
 
   useEffect(() => {
     if (isSignInOpen || isSignUpOpen || navbarOpen) {

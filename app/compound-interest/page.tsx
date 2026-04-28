@@ -99,7 +99,7 @@ const CompoundInterestPage = () => {
           <div className='prose prose-lg max-w-none text-slate-600 dark:text-slate-400 dark:prose-invert'>
             <h2 className='text-3xl font-bold text-slate-900 dark:text-white mb-6 underline decoration-blue-500 underline-offset-8'>The Power of Compound Interest</h2>
             <p>
-              Albert Einstein reportedly called compound interest the "eighth wonder of the world." Those who understand it, earn it; those who don&apos;t, pay it. Compound interest is the interest on a loan or deposit calculated based on both the initial principal and the accumulated interest from previous periods.
+              Albert Einstein reportedly called compound interest the &quot;eighth wonder of the world.&quot; Those who understand it, earn it; those who don&apos;t, pay it. Compound interest is the interest on a loan or deposit calculated based on both the initial principal and the accumulated interest from previous periods.
             </p>
             <p>
               At <strong>CalcVerse</strong>, our Compound Interest Calculator helps you visualize how small, consistent contributions can grow into a substantial nest egg over time. By reinvesting your earnings, your money starts to work for you, creating a snowball effect that accelerates wealth creation.

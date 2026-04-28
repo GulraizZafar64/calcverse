@@ -22,7 +22,7 @@ const SalaryAfterTaxPage = () => {
           <div className='prose prose-lg max-w-none text-slate-600 dark:text-slate-400 dark:prose-invert'>
             <h2 className='text-3xl font-bold text-slate-900 dark:text-white mb-6 underline decoration-blue-500 underline-offset-8'>Mastering Your Monthly Budget</h2>
             <p>
-              Your "gross salary" is the number on your offer letter, but your "net salary" is what actually hits your bank account. Understanding the gap between these two figures is the first step toward effective financial planning. Taxes, social security, and other deductions can significantly reduce your purchasing power.
+              Your &quot;gross salary&quot; is the number on your offer letter, but your &quot;net salary&quot; is what actually hits your bank account. Understanding the gap between these two figures is the first step toward effective financial planning. Taxes, social security, and other deductions can significantly reduce your purchasing power.
             </p>
             <p>
               At <strong>CalcVerse</strong>, our Salary After Tax Calculator provides a clear, simplified view of your take-home pay. By entering your annual income and an estimated tax rate, you can immediately see what your monthly cash flow will look like.
@@ -35,7 +35,7 @@ const SalaryAfterTaxPage = () => {
               </p>
               <ul className='space-y-4 mt-4'>
                 <li><strong>Gross Income:</strong> Your total earnings before any taxes or deductions are taken out. This is the figure typically used when discussing salaries and job offers.</li>
-                <li><strong>Net Income:</strong> Often called "take-home pay," this is the amount remaining after all mandatory and voluntary deductions are subtracted from your gross income.</li>
+                <li><strong>Net Income:</strong> Often called &quot;take-home pay,&quot; this is the amount remaining after all mandatory and voluntary deductions are subtracted from your gross income.</li>
               </ul>
             </div>
 

@@ -134,7 +134,7 @@ const InflationCalculatorPage = () => {
             </div>
 
             <p className='mt-10 p-6 bg-slate-50 dark:bg-slate-900 rounded-2xl border-l-4 border-blue-600 italic'>
-              Pro Tip: Always calculate your investment returns in "real" (inflation-adjusted) terms. A 6% nominal return during 4% inflation is only a 2% real gain.
+              Pro Tip: Always calculate your investment returns in &quot;real&quot; (inflation-adjusted) terms. A 6% nominal return during 4% inflation is only a 2% real gain.
             </p>
 
             <h2 className='text-3xl font-bold text-slate-900 dark:text-white mt-20 mb-8'>Frequently Asked Questions</h2>
@@ -142,7 +142,7 @@ const InflationCalculatorPage = () => {
               faqs={[
                 {
                   q: "What is the Consumer Price Index (CPI)?",
-                  a: "The Consumer Price Index is the most common measure of inflation. It tracks the average change over time in the prices paid by urban consumers for a 'market basket' of consumer goods and services."
+                  a: "The Consumer Price Index is the most common measure of inflation. It tracks the average change over time in the prices paid by urban consumers for a &apos;market basket&apos; of consumer goods and services."
                 },
                 {
                   q: "Why is a little bit of inflation considered good?",

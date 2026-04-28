@@ -61,7 +61,7 @@ const HealthLifestylePage = () => {
             & Well-being.
           </h1>
           <p className='mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-400 font-medium'>
-            Our health and lifestyle calculators are designed to help you make quick, informed decisions in your everyday life. Whether you're tracking your fitness goals or splitting a bill with friends, we've got you covered.
+            Our health and lifestyle calculators are designed to help you make quick, informed decisions in your everyday life. Whether you&apos;re tracking your fitness goals or splitting a bill with friends, we&apos;ve got you covered.
           </p>
         </div>
       </section>
@@ -108,7 +108,7 @@ const HealthLifestylePage = () => {
                   </div>
                   <div>
                     <h3 className='text-xl font-bold text-slate-900 dark:text-white mb-2'>Precise Timekeeping</h3>
-                    <p className='text-slate-600 dark:text-slate-400'>Know exactly how long you've been on this planet with our detailed age calculator.</p>
+                    <p className='text-slate-600 dark:text-slate-400'>Know exactly how long you&apos;ve been on this planet with our detailed age calculator.</p>
                   </div>
                 </div>
               </div>

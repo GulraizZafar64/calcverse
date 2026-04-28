@@ -16,7 +16,7 @@ const PrivacyPolicyPage = () => {
         <div className='rounded-3xl border border-slate-100 bg-white p-10 shadow-sm dark:border-slate-800 dark:bg-slate-900'>
           <h2 className='text-2xl font-bold text-slate-900 dark:text-white mb-6'>1. Introduction</h2>
           <p className='text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-4'>
-            CalcVerse ("we", "our", or "us") operates https://calcverse.site (the "Site"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Site and the choices you have associated with that data.
+            CalcVerse (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) operates https://calcverse.site (the &quot;Site&quot;). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Site and the choices you have associated with that data.
           </p>
           <p className='text-slate-600 dark:text-slate-400 text-lg leading-relaxed'>
             By using the Site, you agree to the collection and use of information in accordance with this policy.
@@ -28,11 +28,11 @@ const PrivacyPolicyPage = () => {
           <div className='space-y-6 text-slate-600 dark:text-slate-400 text-lg'>
             <div>
               <h3 className='font-bold text-slate-900 dark:text-white mb-2'>Calculator Data</h3>
-              <p>Our financial calculators are designed to be "privacy-first". All calculations are performed locally in your web browser. We do not transmit, store, or see any of the numerical data you enter into our tools (e.g., loan amounts, interest rates, salary details).</p>
+              <p>Our financial calculators are designed to be &quot;privacy-first&quot;. All calculations are performed locally in your web browser. We do not transmit, store, or see any of the numerical data you enter into our tools (e.g., loan amounts, interest rates, salary details).</p>
             </div>
             <div>
               <h3 className='font-bold text-slate-900 dark:text-white mb-2'>Log Data</h3>
-              <p>Like many site operators, we collect information that your browser sends whenever you visit our Site ("Log Data"). This Log Data may include information such as your computer's Internet Protocol ("IP") address, browser type, browser version, the pages of our Site that you visit, the time and date of your visit, the time spent on those pages and other statistics.</p>
+              <p>Like many site operators, we collect information that your browser sends whenever you visit our Site (&quot;Log Data&quot;). This Log Data may include information such as your computer&apos;s Internet Protocol (&quot;IP&quot;) address, browser type, browser version, the pages of our Site that you visit, the time and date of your visit, the time spent on those pages and other statistics.</p>
             </div>
           </div>
         </div>
@@ -44,7 +44,7 @@ const PrivacyPolicyPage = () => {
           </p>
           <h3 className='font-bold text-slate-900 dark:text-white mb-2'>Google AdSense & DoubleClick Cookie</h3>
           <p className='text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-4'>
-            Google, as a third-party vendor, uses cookies to serve ads on our Site. Google's use of the DoubleClick cookie enables it and its partners to serve ads to our users based on their visit to our Site or other websites on the Internet.
+            Google, as a third-party vendor, uses cookies to serve ads on our Site. Google&apos;s use of the DoubleClick cookie enables it and its partners to serve ads to our users based on their visit to our Site or other websites on the Internet.
           </p>
           <p className='text-slate-600 dark:text-slate-400 text-lg leading-relaxed'>
             You may opt out of the use of the DoubleClick cookie for interest-based advertising by visiting the <a href="https://www.google.com/settings/ads" className="text-blue-600 hover:underline">Google Ads Settings</a> web page.
@@ -54,7 +54,7 @@ const PrivacyPolicyPage = () => {
         <div className='rounded-3xl border border-slate-100 bg-white p-10 shadow-sm dark:border-slate-800 dark:bg-slate-900'>
           <h2 className='text-2xl font-bold text-slate-900 dark:text-white mb-6'>4. Service Providers</h2>
           <p className='text-slate-600 dark:text-slate-400 text-lg leading-relaxed'>
-            We may employ third-party companies and individuals to facilitate our Site ("Service Providers"), to provide the Site on our behalf, to perform Site-related services or to assist us in analyzing how our Site is used (e.g., Google Analytics). These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.
+            We may employ third-party companies and individuals to facilitate our Site (&quot;Service Providers&quot;), to provide the Site on our behalf, to perform Site-related services or to assist us in analyzing how our Site is used (e.g., Google Analytics). These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.
           </p>
         </div>
 

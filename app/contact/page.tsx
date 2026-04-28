@@ -17,7 +17,7 @@ const ContactPage = () => {
             Get in Touch with the <span className="text-blue-600">CalcVerse Team</span>
           </h1>
           <p className='mt-6 max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-400'>
-            Have a question about a specific calculator formula? Or maybe you have a suggestion for a new tool? We'd love to hear from you. Our team typically responds within 24 hours.
+            Have a question about a specific calculator formula? Or maybe you have a suggestion for a new tool? We&apos;d love to hear from you. Our team typically responds within 24 hours.
           </p>
         </div>
         <div className='rounded-3xl border border-slate-100 bg-white p-10 shadow-xl dark:border-slate-800 dark:bg-slate-900'>

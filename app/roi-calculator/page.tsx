@@ -149,7 +149,7 @@ const ROICalculatorPage = () => {
                   a: "You should include all costs associated with the investment, including the purchase price, taxes, commissions, maintenance costs, and any other fees incurred to acquire or hold the asset."
                 }
               ]}
-+            />
+            />
           </div>
         </div>
       </section>
