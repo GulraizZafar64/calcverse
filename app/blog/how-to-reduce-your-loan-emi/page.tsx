@@ -15,7 +15,20 @@ const HowToReduceEMIPage = () => {
       date='April 10, 2026'
       readTime='6 min read'
       image='https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1400&q=80'
-      imageAlt='Calculator, documents, and pen for planning loan EMI'>
+      imageAlt='Calculator, documents, and pen for planning loan EMI'
+      relatedPosts={[
+        {
+          title: 'First-Time Homebuyer Mortgage Guide',
+          slug: 'first-time-mortgage-guide',
+          image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80'
+        },
+        {
+          title: 'Debt Avalanche vs Snowball',
+          slug: 'debt-avalanche-vs-snowball',
+          image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80'
+        }
+      ]}
+    >
           <p>
             Your Equated Monthly Installment (EMI) is the fixed amount you pay a lender every month until your loan is fully repaid. While an EMI makes large purchases manageable, a high EMI can strain your budget and limit your financial flexibility. The good news: there are several proven ways to bring it down.
           </p>

@@ -15,7 +15,20 @@ const RetirementSavingsByAgePage = () => {
       date='April 4, 2026'
       readTime='8 min read'
       image='https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=1400&q=80'
-      imageAlt='Piggy bank and stacked coins for retirement planning'>
+      imageAlt='Piggy bank and stacked coins for retirement planning'
+      relatedPosts={[
+        {
+          title: 'Compound Interest Explained',
+          slug: 'compound-interest-explained',
+          image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80'
+        },
+        {
+          title: 'Tax-Efficient Salary Planning',
+          slug: 'tax-efficient-salary-planning',
+          image: 'https://plus.unsplash.com/premium_photo-1679923906285-386991e8d862?w=800&q=80'
+        }
+      ]}
+    >
           <p>
             Retirement savings benchmarks give you a ballpark figure to aim for at each life stage. While everyone's situation is different, these guidelines — popularized by Fidelity Investments and other financial institutions — are a useful starting point for assessing your progress.
           </p>

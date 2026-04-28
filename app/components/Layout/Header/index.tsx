@@ -79,54 +79,60 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 py-1 z-50 w-full bg-transparent transition-all ${
-        sticky ? 'shadow-lg dark:shadow-neutral-50/5 bg-white dark:bg-darklight' : 'shadow-none'
+      className={`fixed top-0 z-50 w-full transition-all duration-500 ${
+        sticky 
+          ? 'py-2 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg shadow-lg border-b border-slate-200/50 dark:border-slate-800/50' 
+          : 'py-4 bg-transparent shadow-none'
       }`}>
       <div
-        className={`container flex items-center justify-between gap-10 duration-300  ${
-          sticky ? 'py-3' : 'py-4'
-        }`}>
-        <Logo />
-        <nav>
-          <ul className='hidden xl:flex flex-grow items-center justify-start gap-10 '>
-            {navlink.map((item, index) => (
-              <HeaderLink key={index} item={item} />
-            ))}
-          </ul>
-        </nav>
+        className='container flex items-center justify-between gap-6'>
+        <div className="flex items-center gap-12">
+          <Logo />
+          <nav className='hidden xl:block'>
+            <ul className='flex items-center gap-8'>
+              {navlink.map((item, index) => (
+                <HeaderLink key={index} item={item} />
+              ))}
+            </ul>
+          </nav>
+        </div>
+        
         <div className='flex items-center gap-4'>
           <button
             aria-label='Toggle theme'
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            className='flex items-center justify-center text-body-color duration-300 hover:cursor-pointer hover:text-primary dark:text-white bg-neutral-50 rounded-full dark:bg-darklight p-2 outline-none'>
+            className='flex items-center justify-center text-slate-600 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-all duration-300 p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50'>
             <Icon
               icon='solar:sun-2-bold'
-              width='24'
-              height='24'
+              width='20'
+              height='20'
               className='hidden dark:block'
             />
             <Icon
               icon='solar:moon-bold'
-              width='24'
-              height='24'
+              width='20'
+              height='20'
               className='dark:hidden block'
             />
           </button>
+          
           <Link
             href='/#contact'
-            className='hidden xl:block px-4 py-2 bg-primary text-white rounded-lg outline-none hover:bg-transparent hover:text-primary border border-primary duration-500 text-base font-semibold'>
+            className='hidden xl:flex px-6 py-2.5 bg-blue-600 text-white rounded-xl shadow-lg shadow-blue-500/20 hover:bg-blue-700 hover:shadow-blue-500/40 transition-all duration-300 text-sm font-bold items-center'>
             Contact Us
           </Link>
+          
           <button
             onClick={() => setNavbarOpen(!navbarOpen)}
-            className='block xl:hidden p-2 rounded-lg hover:cursor-pointer'
+            className='flex xl:hidden flex-col gap-1.5 p-2 rounded-lg transition-colors'
             aria-label='Toggle mobile menu'>
-            <span className='block w-6 h-0.5 bg-darkblue dark:bg-white'></span>
-            <span className='block w-6 h-0.5 bg-darkblue dark:bg-white mt-1.5'></span>
-            <span className='block w-6 h-0.5 bg-darkblue dark:bg-white mt-1.5'></span>
+            <span className={`block w-6 h-0.5 bg-slate-900 dark:bg-white transition-all ${navbarOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`block w-4 h-0.5 bg-slate-900 dark:bg-white transition-all ${navbarOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`block w-6 h-0.5 bg-slate-900 dark:bg-white transition-all ${navbarOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
           </button>
         </div>
       </div>
+
       {navbarOpen && (
         <div className='fixed top-0 left-0 w-full h-full bg-black/50 z-40' />
       )}

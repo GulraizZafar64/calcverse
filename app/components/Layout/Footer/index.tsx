@@ -24,136 +24,91 @@ const Footer = () => {
   }, [])
 
   return (
-    <footer>
-      <div className='container py-14'>
-        <div className='flex flex-col sm:flex-row sm:items-center justify-between mb-20 gap-5'>
-          <div className='w-fit'>
-            <Logo />
-          </div>
-          <div className='flex sm:flex-row flex-col sm:items-center gap-8'>
-            <p className='text-darkblue dark:text-white text-lg font-medium'>
-              Stay Connected
+    <footer className='bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-900'>
+      <div className='container pt-20 pb-12'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8'>
+          {/* Brand Column */}
+          <div className='lg:col-span-5 space-y-8'>
+            <div className='w-fit'>
+              <Logo />
+            </div>
+            <p className='text-slate-600 dark:text-slate-400 text-base leading-relaxed max-w-sm'>
+              Empowering your financial future with accurate, private, and professional-grade calculators. Plan your loans, investments, and taxes with confidence.
             </p>
-            <div className='flex gap-4'>
-              <Link href='mailto:contact@calcverse.site' className='px-4 py-2 bg-primary text-white rounded-lg outline-none hover:bg-transparent hover:text-primary border border-primary duration-500 text-base font-semibold'>
-                Email Us
+            <div className='flex items-center gap-4'>
+              <Link 
+                href='mailto:contact@calcverse.site' 
+                className='inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-2xl hover:bg-blue-700 transition-all duration-300 font-bold text-sm shadow-lg shadow-blue-500/25'
+              >
+                <Icon icon="lucide:mail" className="w-4 h-4" />
+                Email Support
               </Link>
             </div>
           </div>
-        </div>
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-16 xl:gap-8'>
-          {/* CLOUMN-1 */}
-          <div className='lg:col-span-4 sm:col-span-2 flex flex-col gap-5'>
-            <div className='flex gap-4'>
-              <Link href='/'>
-                <Icon
-                  icon='tabler:brand-instagram'
-                  width={45}
-                  height={45}
-                  className='text-darkblue dark:text-white bg-darkmode/5 dark:bg-white/10 rounded-lg p-2 hover:text-primary dark:hover:text-primary duration-300'
-                />
-              </Link>
-              <Link href='/'>
-                <Icon
-                  icon='tabler:brand-dribbble'
-                  width={45}
-                  height={45}
-                  className='text-darkblue dark:text-white bg-darkmode/5 dark:bg-white/10 rounded-lg p-2 hover:text-primary dark:hover:text-primary duration-300'
-                />
-              </Link>
-              <Link href='/'>
-                <Icon
-                  icon='tabler:brand-twitter-filled'
-                  width={45}
-                  height={45}
-                  className='text-darkblue dark:text-white bg-darkmode/5 dark:bg-white/10 rounded-lg p-2 hover:text-primary dark:hover:text-primary duration-300'
-                />
-              </Link>
-              <Link href='/'>
-                <Icon
-                  icon='tabler:brand-youtube-filled'
-                  width={45}
-                  height={45}
-                  className='text-darkblue dark:text-white bg-darkmode/5 dark:bg-white/10 rounded-lg p-2 hover:text-primary dark:hover:text-primary duration-300'
-                />
-              </Link>
-            </div>
+
+          {/* Links Columns */}
+          <div className='lg:col-span-4 grid grid-cols-2 gap-8'>
+            {footerlink.map((group, i) => (
+              <div key={i} className='space-y-6'>
+                <h4 className='text-base font-bold uppercase tracking-widest text-slate-900 dark:text-white'>
+                  {group.section}
+                </h4>
+                <ul className='space-y-4'>
+                  {group.links.map((link, j) => (
+                    <li key={j}>
+                      <Link
+                        href={link.href}
+                        className='text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 text-base font-medium transition-colors'>
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
-          {/* CLOUMN-2 */}
-          <div className='lg:col-span-4 col-span-1'>
-            <div className='flex gap-20'>
-              {footerlink.map((product, i) => (
-                <div key={i} className='group relative col-span-2'>
-                  <p className='text-xl font-semibold mb-9'>
-                    {product.section}
-                  </p>
-                  <ul>
-                    {product.links.map((item, i) => (
-                      <li key={i} className='mb-3'>
-                        <Link
-                          href={item.href}
-                          className='text-darkblue/60 dark:text-white/60 hover:text-primary dark:hover:text-primary text-base font-normal mb-6'>
-                          {item.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+
+          {/* Contact Column */}
+          <div className='lg:col-span-3 space-y-6'>
+            <h4 className='text-base font-bold uppercase tracking-widest text-slate-900 dark:text-white'>
+              Contact Us
+            </h4>
+            <div className='space-y-4'>
+              <div className='flex items-start gap-3 group'>
+                <div className='mt-1 p-2 rounded-lg bg-slate-50 dark:bg-slate-900 text-slate-400 group-hover:text-blue-600 transition-colors'>
+                  <Icon icon="lucide:map-pin" className="w-5 h-5" />
                 </div>
-              ))}
-            </div>
-          </div>
-          {/* CLOUMN-3 */}
-          <div className='lg:col-span-4 col-span-1'>
-            <div className='flex gap-2'>
-              <Icon
-                icon={'tabler:map-pin'}
-                width={22}
-                height={22}
-                className='text-lightgrey'
-              />
-              <p className='text-base font-normal text-offwhite'>
-                Online Service - Global Support
-              </p>
-            </div>
-            <div className='flex gap-2 mt-10'>
-              <Icon
-                icon={'tabler:mail'}
-                width={22}
-                height={22}
-                className='text-lightgrey'
-              />
-              <Link href='mailto:contact@calcverse.site'>
-                <p className='text-base font-normal text-offwhite hover:text-primary dark:hover:text-primary'>
-                  contact@calcverse.site
-                </p>
-              </Link>
+                <div className='text-base'>
+                  <p className='font-bold text-slate-900 dark:text-white'>Global Support</p>
+                  <p className='text-slate-500 dark:text-slate-400 text-sm'>Available Online 24/7</p>
+                </div>
+              </div>
+              <div className='flex items-start gap-3 group'>
+                <div className='mt-1 p-2 rounded-lg bg-slate-50 dark:bg-slate-900 text-slate-400 group-hover:text-blue-600 transition-colors'>
+                  <Icon icon="lucide:mail" className="w-5 h-5" />
+                </div>
+                <div className='text-base'>
+                  <p className='font-bold text-slate-900 dark:text-white'>Email Us</p>
+                  <Link href='mailto:contact@calcverse.site' className='text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors text-sm'>
+                    contact@calcverse.site
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className='py-3'>
-        <div className='container flex flex-col sm:flex-row items-center justify-between gap-4'>
-          <p className='text-center sm:text-left'>
-            © {new Date().getFullYear()} - All Rights Reserved by CalcVerse Financial Tools
+
+        {/* Bottom Bar */}
+        <div className='mt-20 pt-8 border-t border-slate-50 dark:border-slate-900/50 text-center'>
+          <p className='text-base text-slate-500 dark:text-slate-500 font-medium'>
+            © {new Date().getFullYear()} CalcVerse Financial Tools. All rights reserved.
           </p>
-          <div className='flex flex-wrap items-center justify-center sm:justify-end gap-4 text-sm'>
-            <Link href='/privacy-policy' className='hover:text-primary dark:hover:text-primary text-darkblue/60 dark:text-white/60'>
-              Privacy Policy
-            </Link>
-            <Link href='/terms-of-service' className='hover:text-primary dark:hover:text-primary text-darkblue/60 dark:text-white/60'>
-              Terms of Service
-            </Link>
-            <Link href='/disclaimer' className='hover:text-primary dark:hover:text-primary text-darkblue/60 dark:text-white/60'>
-              Disclaimer
-            </Link>
-            <Link href='/contact' className='hover:text-primary dark:hover:text-primary text-darkblue/60 dark:text-white/60'>
-              Contact
-            </Link>
-          </div>
         </div>
+
       </div>
     </footer>
   )
 }
 
 export default Footer
+

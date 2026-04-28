@@ -15,7 +15,20 @@ const FirstTimeMortgageGuidePage = () => {
       date='April 6, 2026'
       readTime='9 min read'
       image='https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1400&q=80'
-      imageAlt='House keys and mini home model on a desk'>
+      imageAlt='House keys and mini home model on a desk'
+      relatedPosts={[
+        {
+          title: 'How to Reduce Your Loan EMI',
+          slug: 'how-to-reduce-your-loan-emi',
+          image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80'
+        },
+        {
+          title: 'Retirement Savings by Age',
+          slug: 'retirement-savings-by-age',
+          image: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=800&q=80'
+        }
+      ]}
+    >
           <p>
             Buying your first home is one of the most significant financial decisions you will ever make. While the process can feel overwhelming, breaking it down into clear steps makes it manageable. This guide covers everything from getting pre-approved to understanding what you will owe at the closing table.
           </p>

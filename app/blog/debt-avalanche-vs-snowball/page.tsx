@@ -15,7 +15,20 @@ const DebtAvalancheVsSnowballPage = () => {
       date='March 30, 2026'
       readTime='6 min read'
       image='https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1400&q=80'
-      imageAlt='Credit cards and bills representing debt payoff choices'>
+      imageAlt='Credit cards and bills representing debt payoff choices'
+      relatedPosts={[
+        {
+          title: 'How to Reduce Your Loan EMI',
+          slug: 'how-to-reduce-your-loan-emi',
+          image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80'
+        },
+        {
+          title: 'Tax-Efficient Salary Planning',
+          slug: 'tax-efficient-salary-planning',
+          image: 'https://plus.unsplash.com/premium_photo-1679923906285-386991e8d862?w=800&q=80'
+        }
+      ]}
+    >
           <p>
             If you are carrying multiple debts — credit cards, personal loans, student loans — two popular strategies can help you pay them off systematically: the <strong>debt avalanche</strong> and the <strong>debt snowball</strong>. Both require making minimum payments on all debts and directing any extra money toward one specific debt. The difference is which debt you target first.
           </p>

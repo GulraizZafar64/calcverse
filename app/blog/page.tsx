@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata = {
   title: 'Financial Tips & Guides | CalcVerse Blog',
@@ -14,6 +15,8 @@ const articles = [
     date: 'April 10, 2026',
     readTime: '6 min read',
     category: 'Loans',
+    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80',
+    imageAlt: 'Calculator and documents representing loan planning',
   },
   {
     slug: 'compound-interest-explained',
@@ -23,6 +26,8 @@ const articles = [
     date: 'April 8, 2026',
     readTime: '7 min read',
     category: 'Investing',
+    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80',
+    imageAlt: 'Financial charts showing compound growth',
   },
   {
     slug: 'first-time-mortgage-guide',
@@ -32,6 +37,8 @@ const articles = [
     date: 'April 6, 2026',
     readTime: '9 min read',
     category: 'Mortgages',
+    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80',
+    imageAlt: 'House keys representing a first-time mortgage',
   },
   {
     slug: 'retirement-savings-by-age',
@@ -41,6 +48,8 @@ const articles = [
     date: 'April 4, 2026',
     readTime: '8 min read',
     category: 'Retirement',
+    image: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=800&q=80',
+    imageAlt: 'Piggy bank representing retirement savings',
   },
   {
     slug: 'tax-efficient-salary-planning',
@@ -50,6 +59,8 @@ const articles = [
     date: 'April 2, 2026',
     readTime: '7 min read',
     category: 'Tax & Salary',
+    image: "https://plus.unsplash.com/premium_photo-1679923906285-386991e8d862?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGF4fGVufDB8fDB8fHww",
+    imageAlt: 'Documents and calculator for tax planning',
   },
   {
     slug: 'debt-avalanche-vs-snowball',
@@ -59,6 +70,8 @@ const articles = [
     date: 'March 30, 2026',
     readTime: '6 min read',
     category: 'Debt',
+    image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80',
+    imageAlt: 'Credit cards representing debt management',
   },
 ]
 
@@ -84,20 +97,35 @@ const BlogPage = () => {
           <Link
             key={article.slug}
             href={`/blog/${article.slug}`}
-            className='group flex flex-col rounded-2xl border border-slate-100 dark:border-slate-800 p-6 hover:border-blue-200 dark:hover:border-blue-800 hover:shadow-md transition-all duration-200'>
-            <span className='inline-flex self-start rounded-full bg-blue-50 dark:bg-blue-900/30 px-3 py-1 text-xs font-semibold text-blue-600 dark:text-blue-400 mb-4'>
-              {article.category}
-            </span>
-            <h2 className='text-xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-3 leading-snug'>
-              {article.title}
-            </h2>
-            <p className='text-slate-600 dark:text-slate-400 text-sm leading-7 flex-1'>
-              {article.excerpt}
-            </p>
-            <div className='mt-6 flex items-center gap-3 text-xs text-slate-400 dark:text-slate-500'>
-              <span>{article.date}</span>
-              <span>·</span>
-              <span>{article.readTime}</span>
+            className='group flex flex-col rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-950 overflow-hidden hover:border-blue-200 dark:hover:border-blue-800 hover:shadow-xl transition-all duration-300'>
+            <div className='relative h-52 w-full overflow-hidden'>
+              <Image
+                src={article.image}
+                alt={article.imageAlt}
+                fill
+                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                className='object-cover group-hover:scale-105 transition-transform duration-500'
+              />
+              <div className='absolute inset-0 bg-gradient-to-t from-slate-950/20 to-transparent' />
+              <div className='absolute top-4 left-4'>
+                <span className='inline-flex rounded-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-3 py-1 text-xs font-bold text-blue-600 dark:text-blue-400 shadow-sm'>
+                  {article.category}
+                </span>
+              </div>
+            </div>
+
+            <div className='p-6 flex flex-col flex-1'>
+              <h2 className='text-xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-3 leading-snug'>
+                {article.title}
+              </h2>
+              <p className='text-slate-600 dark:text-slate-400 text-sm leading-7 flex-1'>
+                {article.excerpt}
+              </p>
+              <div className='mt-6 flex items-center gap-3 text-xs font-medium text-slate-400 dark:text-slate-500'>
+                <span>{article.date}</span>
+                <span className='h-1 w-1 rounded-full bg-slate-300 dark:bg-slate-700' />
+                <span>{article.readTime}</span>
+              </div>
             </div>
           </Link>
         ))}

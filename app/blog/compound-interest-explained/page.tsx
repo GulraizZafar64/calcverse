@@ -15,7 +15,20 @@ const CompoundInterestExplainedPage = () => {
       date='April 8, 2026'
       readTime='7 min read'
       image='https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1400&q=80'
-      imageAlt='Stock market charts and investment data on a monitor'>
+      imageAlt='Stock market charts and investment data on a monitor'
+      relatedPosts={[
+        {
+          title: 'Retirement Savings by Age',
+          slug: 'retirement-savings-by-age',
+          image: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=800&q=80'
+        },
+        {
+          title: 'Tax-Efficient Salary Planning',
+          slug: 'tax-efficient-salary-planning',
+          image: 'https://plus.unsplash.com/premium_photo-1679923906285-386991e8d862?w=800&q=80'
+        }
+      ]}
+    >
           <p>
             Albert Einstein is often credited with saying: <em>"Compound interest is the eighth wonder of the world. He who understands it, earns it; he who doesn't, pays it."</em> Whether or not Einstein actually said this, the underlying principle is true — compound interest is one of the most powerful forces in personal finance.
           </p>

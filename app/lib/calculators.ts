@@ -251,3 +251,69 @@ export function calculateDebtPayoff(
 		totalPaid: Number((balance + totalInterest).toFixed(2)),
 	};
 }
+
+export function calculateBMI(weight: number, height: number, unit: 'metric' | 'imperial') {
+	let bmi = 0;
+	if (unit === 'metric') {
+		// weight in kg, height in cm
+		bmi = weight / Math.pow(height / 100, 2);
+	} else {
+		// weight in lbs, height in inches
+		bmi = (weight / Math.pow(height, 2)) * 703;
+	}
+
+	let category = '';
+	if (bmi < 18.5) category = 'Underweight';
+	else if (bmi < 25) category = 'Normal weight';
+	else if (bmi < 30) category = 'Overweight';
+	else category = 'Obesity';
+
+	return {
+		bmi: Number(bmi.toFixed(1)),
+		category,
+	};
+}
+
+export function calculateAge(birthDate: string) {
+	const birth = new Date(birthDate);
+	const today = new Date();
+
+	let years = today.getFullYear() - birth.getFullYear();
+	let months = today.getMonth() - birth.getMonth();
+	let days = today.getDate() - birth.getDate();
+
+	if (days < 0) {
+		months -= 1;
+		const lastMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+		days += lastMonth.getDate();
+	}
+
+	if (months < 0) {
+		years -= 1;
+		months += 12;
+	}
+
+	return { years, months, days };
+}
+
+export function calculateTip(billAmount: number, tipPercentage: number, numberOfPeople: number) {
+	const totalTip = (billAmount * tipPercentage) / 100;
+	const totalBill = billAmount + totalTip;
+	const perPerson = totalBill / numberOfPeople;
+	const tipPerPerson = totalTip / numberOfPeople;
+
+	return {
+		totalTip: Number(totalTip.toFixed(2)),
+		totalBill: Number(totalBill.toFixed(2)),
+		tipPerPerson: Number(tipPerPerson.toFixed(2)),
+		totalPerPerson: Number(perPerson.toFixed(2)),
+	};
+}
+
+export function calculatePercentage(value: number, total: number) {
+	const percentage = total !== 0 ? (value / total) * 100 : 0;
+	return {
+		percentage: Number(percentage.toFixed(2)),
+	};
+}
+

@@ -26,20 +26,35 @@ const CalculatorForm: React.FC<CalculatorFormProps> = ({
               {field.label}
             </span>
             <div className='rounded-2xl border border-slate-300 bg-slate-50 px-4 py-2 dark:border-slate-700 dark:bg-slate-950'>
-              <input
-                inputMode='decimal'
-                type='text'
-                value={field.value}
-                onChange={(event) => onChange(field.name, event.target.value)}
-                placeholder={field.placeholder}
-                className='w-full border-0 bg-transparent text-lg font-medium text-darkblue outline-none placeholder:text-slate-400 dark:text-white'
-              />
+              {field.type === 'select' ? (
+                <select
+                  value={field.value}
+                  onChange={(event) => onChange(field.name, event.target.value)}
+                  className='w-full border-0 bg-transparent text-lg font-medium text-darkblue outline-none dark:text-white appearance-none cursor-pointer'
+                >
+                  {field.options?.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+              ) : (
+                <input
+                  inputMode={field.type === 'number' ? 'decimal' : 'text'}
+                  type={field.type || 'text'}
+                  value={field.value}
+                  onChange={(event) => onChange(field.name, event.target.value)}
+                  placeholder={field.placeholder}
+                  className='w-full border-0 bg-transparent text-lg font-medium text-darkblue outline-none placeholder:text-slate-400 dark:text-white'
+                />
+              )}
             </div>
             {field.error && (
               <p className='text-sm text-red-600 dark:text-red-400'>{field.error}</p>
             )}
           </label>
         ))}
+
       </div>
       <button
         type='submit'

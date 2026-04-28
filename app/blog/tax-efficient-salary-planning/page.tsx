@@ -14,8 +14,21 @@ const TaxEfficientSalaryPlanningPage = () => {
       title='Tax-Efficient Salary Planning: Keep More of What You Earn'
       date='April 2, 2026'
       readTime='7 min read'
-      image='https://images.unsplash.com/photo-1554224154-26032fced8bd?w=1400&q=80'
-      imageAlt='Person reviewing salary and tax paperwork'>
+      image='https://plus.unsplash.com/premium_photo-1679923906285-386991e8d862?w=1400&q=80'
+      imageAlt='Person reviewing salary and tax paperwork'
+      relatedPosts={[
+        {
+          title: 'How Much Should You Have Saved for Retirement?',
+          slug: 'retirement-savings-by-age',
+          image: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=800&q=80'
+        },
+        {
+          title: 'Compound Interest Explained',
+          slug: 'compound-interest-explained',
+          image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80'
+        }
+      ]}
+    >
           <p>
             Your gross salary and your actual take-home pay can be strikingly different numbers. The gap is largely determined by how well you use the tax advantages available to you. This guide covers the key strategies that employees and contractors can use to legally minimize their tax burden.
           </p>
